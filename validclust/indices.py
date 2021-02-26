@@ -13,10 +13,10 @@ from sklearn.metrics import (
 # https://github.com/scikit-learn/scikit-learn/blob/c4733f4895c1becdf587b38970f6f7066656e3f9/doc/whats_new/v0.20.rst#id2012
 sklearn_version = version.parse(sklearn.__version__)
 nm_chg_ver = version.parse("0.23")
-if sklearn_version >= nm_chg_ver:
-    from sklearn.metrics import calinski_harabasz_score as _cal_score
-else:
-    from sklearn.metrics import calinski_harabaz_score as _cal_score
+from sklearn.metrics import calinski_harabasz_score as _cal_score
+#if sklearn_version >= nm_chg_ver:
+#else:
+    #from sklearn.metrics import calinski_harabaz_score as _cal_score
 
 
 def _get_clust_pairs(clusters):
